@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='bootstrap-colorpicker.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-colorpicker.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Solarizer</title>
+  </head>
+  <body>
+    <h1>Solarizer</h1>
+    <p>This app is inspired by <a href="http://ethanschoonover.com/solarized">Ethan Schnoover's solarized project</a>, color theory, and my <strike>laziness</strike> efficiency.</p>
+   
+    <img src="/static/img/bootstrap-colorpicker/hue.png">
+    <div>
+      <div id="base3" style="width:200px; height:200px; background-color: #fdf6e3;">
+      </div>
+      <script>
+      $(function(){
+          $('#base3').colorpicker();
+          });
+      </script>
+    </div>
+  </body>
+<html>
+
