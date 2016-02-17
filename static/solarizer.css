@@ -7,8 +7,16 @@
   margin-left: 20px;
   margin-top: 20px;
 }
-.color_container label {
+.color_container .label_info {
+  overflow: auto;
+}
+.color_container .label_info label {
   display: block;
+  float: left;
+}
+.color_container .label_info a {
+  float: right;
+  font-size: 1.25em;
 }
 .color_container input {
   width: 200px;

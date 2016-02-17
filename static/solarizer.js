@@ -18,5 +18,10 @@ $(function(){
     green: "#859900"
   };
 */
-$('.color').spectrum();
+  $('.color').spectrum();
+  
+  $('[data-toggle="tooltip"]').tooltip({
+    html: true
+  });
+
 });
