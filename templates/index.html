@@ -25,12 +25,18 @@
 
     <div><!-- color container-->
     {% for name in names %}
+      {% if loop.index0 == 0 %}
+        <div class="bases">
+      {% elif name.find("base") == -1 and names[loop.index0 - 1].find("base") != -1 %}
+        </div><div class="accents">
+      {% endif %}
       <div class="color_container">
         <label for="{{ name }}">{{ name }}</label>
         <input type="text" value="{{ colors[loop.index0] }}"/>
         <div id="{{ name }}" class="color" data-color="{{ colors[loop.index0] }}"></div>
       </div>
     {% endfor %}
+      </div><!--close accent colors-->
     </div><!--end color container-->
   </body>
 <html>
