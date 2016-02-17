@@ -1,11 +1,27 @@
 @import "solarized_constants";
 
-.color(@bgcolor) {
-  width: 200px; 
-  height: 200px; 
-  background-color: @bgcolor;
+.color_container {
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+  
+  & label {
+    display: block;
+  }
+
+  & input {
+    width: 200px;
+  }
 }
 
-#base3 {
-  .color(@base3);
+.color {
+  width: 200px; 
+  height: 200px; 
 }
+
+.-(@i: length(@solarized_names)) when (@i > 0) {
+  @name: extract(@solarized_names, @i);
+  &#@{name} {background: @@name}
+  .-((@i - 1));
+} .-;
+

@@ -8,10 +8,10 @@
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
       integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="{{ url_for('static', filename='bootstrap-colorpicker.min.js') }}"></script>
     <script src="{{ url_for('static', filename='solarizer.js') }}"></script>
-    
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-colorpicker.min.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
       integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='solarizer.css') }}">
@@ -20,12 +20,17 @@
   <body>
     <h1>Solarizer</h1>
     <p>This app is inspired by <a href="http://ethanschoonover.com/solarized">Ethan Schnoover's solarized project</a>, color theory, and my <strike>laziness</strike> efficiency.</p>
+    <p>To use, just change a fore or background color to watch color theory in action</p>    
     <!--clean all this uuuuup-->
 
     <div><!-- color container-->
-      <div id="base3" class="color"> </div>
-      <div id="base2" class="color"> </div>
-      <div id="base1" class="color"> </div>
+    {% for name in names %}
+      <div class="color_container">
+        <label for="{{ name }}">{{ name }}</label>
+        <input type="text" value="{{ colors[loop.index0] }}"/>
+        <div id="{{ name }}" class="color" data-color="{{ colors[loop.index0] }}"></div>
+      </div>
+    {% endfor %}
     </div><!--end color container-->
   </body>
 <html>

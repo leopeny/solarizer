@@ -1,5 +1,63 @@
-#base3 {
+.color_container {
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.color_container label {
+  display: block;
+}
+.color_container input {
+  width: 200px;
+}
+.color {
   width: 200px;
   height: 200px;
-  background-color: #fdf6e3;
+}
+#green {
+  background: #859900;
+}
+#cyan {
+  background: #2aa198;
+}
+#blue {
+  background: #268bd2;
+}
+#violet {
+  background: #6c71c4;
+}
+#magenta {
+  background: #d33682;
+}
+#red {
+  background: #dc322f;
+}
+#orange {
+  background: #cb4b16;
+}
+#yellow {
+  background: #b58900;
+}
+#base3 {
+  background: #fdf6e3;
+}
+#base2 {
+  background: #eee8d5;
+}
+#base1 {
+  background: #93a1a1;
+}
+#base0 {
+  background: #839496;
+}
+#base00 {
+  background: #657b83;
+}
+#base01 {
+  background: #586e75;
+}
+#base02 {
+  background: #073642;
+}
+#base03 {
+  background: #002b36;
 }
